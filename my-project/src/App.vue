@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="d-flex flex-column align-items-center">
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About Us</router-link> |

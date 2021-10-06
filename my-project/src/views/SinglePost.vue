@@ -1,36 +1,57 @@
 <template>
-  <div>
-    <h2>Titre du post</h2>
-    <p><span>Auteur du post</span>, Date de création</p>
+  <div class="d-flex flex-column w-75">
+    <div>
+      <img
+        :src="blogdata.articles[getId].urlToImage"
+        alt="image post"
+        class="w-100"
+      />
+    </div>
+    <div class="text-start">
+      <h2 class="fw-bold my-4 text-center">
+        {{ blogdata.articles[getId].title }}
+      </h2>
+      <p class="mb-4">
+        <i class="fas fa-user me-1"></i>
+        <span class="fs-5 me-5">{{
+          blogdata.articles[getId].source.name
+        }}</span>
+        <i class="far fa-calendar-alt"></i> {{ dateFormat(blogdata.articles[getId].publishedAt) }}
+      </p>
 
-    <p>
-      <span class="fw-bold">Introduction au Post :</span>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro cumque,
-      itaque sunt fuga dolorem ullam, inventore doloremque laboriosam explicabo
-      laudantium nemo minus excepturi dolor ratione velit fugiat! Id, iusto
-      suscipit!
-    </p>
+      <p>
+        <span class="fw-bold">Introduction au Post :</span>
+        {{ blogdata.articles[getId].description }}
+      </p>
 
-    <p>
-      <span class="fw-bold">Contenu du Post : </span>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae optio
-      commodi at laborum fugit temporibus ex dicta quaerat id porro reiciendis,
-      provident maiores enim corporis officia voluptate deserunt asperiores quia
-      nemo ipsum et cumque mollitia obcaecati? Autem minus ducimus at! Rem nemo
-      enim inventore optio vitae natus unde sint doloremque sapiente dolores.
-      Blanditiis animi repellat ad repudiandae? Libero, omnis. Suscipit tenetur
-      quaerat molestias ratione est modi quibusdam qui libero blanditiis
-      necessitatibus. Odio, quam. Libero sequi possimus ducimus placeat
-      consectetur error non. Ipsum quod, a, ipsam, labore aliquid similique
-      sequi eligendi sed cum illo temporibus fugiat praesentium iusto voluptatum
-      rerum incidunt!
-    </p>
+      <p>
+        <span class="fw-bold">Contenu du Post : </span>
+        {{ blogdata.articles[getId].content }}
+      </p>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: "SinglePost",
+  methods: {
+    dateFormat(date) {
+        return new Date(date).toLocaleDateString("fr-FR", {
+            year: 'numeric',
+            month: 'long',
+            day: '2-digit'
+        })
+    }
+  },
+  computed: {
+    blogdata() {
+      return this.$store.state.blogdata;
+    },
+    getId() {
+      return this.$route.params.id;
+    }
+  },
 };
 </script>
 
