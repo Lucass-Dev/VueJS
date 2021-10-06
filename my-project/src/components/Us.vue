@@ -32,10 +32,10 @@
   </div>
 
   <div class="cards cards--three">
-    <img src="" class="img-responsive" alt="">
+    <img src="../../public/chris.jpg" class="img-responsive" alt="">
     <span class="cards--three__rect-1">
       <span class="shadow-1"></span>
-      <p>christopher </p>
+      <p>Christopher Billy</p>
     </span>
     <span class="cards--three__rect-2">
       <span class="shadow-2"></span>
@@ -74,8 +74,8 @@ export default {
 }
 
 .img-responsive {
-  max-width: 100%;
-  height: auto;
+  max-width: 100% ;
+  height: 100%;
 }
 
 .card__collection {
