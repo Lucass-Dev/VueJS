@@ -1,27 +1,27 @@
 <template>
   <div class="admin">
     <div class="formulaire m-auto">
-      <form class="d-flex flex-column border border-dark">
-        <div class="d-flex justify-content-between p-3">
+      <form class="d-flex flex-column border border-dark p-3">
+        <div class="d-flex justify-content-between mb-3">
           <div>
             <label for="author" class="text-left">Auteur :</label>
-            <input type="text" id="author" class="ms-2" placeholder="Nom de l'auteur" />
+            <input type="text" id="author" class="ms-2 ps-1" placeholder="Nom de l'auteur" />
           </div>
           <div>
             <label for="title">Titre :</label>
-            <input type="text" id="title" class="ms-2" placeholder="Titre du post" />
+            <input type="text" id="title" class="ms-2 ps-1" placeholder="Titre du post" />
           </div>
           <div>
             <label for="intro">Intro :</label>
-            <input type="text" id="intro" class="ms-2" placeholder="Intro du post" />
+            <input type="text" id="intro" class="ms-2 ps-1" placeholder="Intro du post" />
           </div>
 
           <button>Ajouter</button>
         </div>
 
-        <div>
+        <div class="d-flex justify-content-center align-items-center">
           <label for="content" class="">Contenu</label>
-          <textarea type="text" id="content" class="ms-2 w-75" placeholder="Contenu du post" />
+          <textarea type="text" id="content" class="ms-2 ps-1 w-75" placeholder="Contenu du post" />
         </div>
       </form>
     </div>
@@ -47,7 +47,7 @@
           <td>{{ article.description }}</td>
           <td>{{ article.content }}</td>
           <td>
-            <button class="me-1">Modifier</button><button>Supprimer</button>
+            <button class="me-1">Modifier</button><button @click="deletePost(index)">Supprimer</button>
           </td>
         </tr>
       </tbody>
@@ -58,6 +58,11 @@
 <script>
 export default {
   name: "Admin",
+  methods: {
+    deletePost(index) {
+      this.$store.dispatch('removePostByID', index)
+    }
+  },
   computed: {
     blogdata() {
       return this.$store.state.blogdata;
