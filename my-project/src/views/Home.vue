@@ -1,6 +1,12 @@
 <template>
   <div class="home">
+    <div class="article border border-5 border-dark rounded m-5" v-for="(article, index) in blogdata.articles" :key="index">
+      <h4 class="m-5">{{article.title}}</h4>
+      <p class="m-5">{{article.description}}</p>
+      <p>Publishing date : {{article.publishedAt}}</p>
+      <button class="btn btn-dark m-5">Lire +</button>
     
+    </div>
   </div>
 </template>
 
@@ -9,9 +15,6 @@
 
 export default {
   name: 'Home',
-  components: {
-    
-  },
 
   data(){
     return{
@@ -20,3 +23,7 @@ export default {
   }
 }
 </script>
+
+<style>
+    
+</style>
