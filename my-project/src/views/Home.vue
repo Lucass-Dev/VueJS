@@ -7,7 +7,9 @@
       <p>Publishing date : {{article.publishedAt|dateFormat}}</p>
       <router-link :to="`/article/${index}`"><button class="btn btn-dark m-5">Lire +</button></router-link>
     </div>
-    <h1 v-if="loading">Chargement des artciles suivant</h1>
+    <div class="position-absolute">
+      <span v-if="loading"><button class=" loading"></button></span>
+    </div>
   </div>
 </template>
 
@@ -73,4 +75,26 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+
+  .loading{
+    z-index: 9999 !important;
+  }
+  .loading {
+    height: 40px;
+    width: 40px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+    animation: spinner3 800ms ease infinite;
+    }
+
+    @keyframes spinner3 {
+    to {
+    transform: rotate(360deg);
+    }
+    } 
+
+</style>
