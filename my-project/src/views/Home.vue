@@ -7,6 +7,7 @@
       <p>Publishing date : {{article.publishedAt}}</p>
       <router-link :to="`/article/${index}`"><button class="btn btn-dark m-5">Lire +</button></router-link>
     </div>
+    <h1 v-if="loading">Chargement des artciles suivant</h1>
   </div>
 </template>
 
@@ -23,6 +24,7 @@ export default {
 
   data(){
     return{
+      loading: false,
       blogdata: this.$store.state.blogdata,
       visibleArticles: [],
     }
@@ -47,8 +49,8 @@ export default {
     },
 
     testCb(){
-
-      sleep(2000).then(() =>{
+      this.loading = true
+      sleep(1500).then(() =>{
           let isVisibleCount = 0;
           this.blogdata.articles.forEach(element => {
         if (element.isVisible) {
@@ -61,7 +63,11 @@ export default {
         this.blogdata.articles[i].isVisible = true;
         this.visibleArticles.push(this.blogdata.articles[i])
         }
+      this.loading = false
       })
+      if (this.visibleArticles.length >= this.blogdata.articles.length) {
+        this.loading = false
+      }
     }
   }
 }
