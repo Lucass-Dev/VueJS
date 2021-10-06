@@ -13,6 +13,8 @@
 <script>
 // @ is an alias to /src
 import { load } from '../js/home.js'
+import { scrollTop } from '../js/home.js'
+import { sleep } from '../js/home.js'
 
 
 export default {
@@ -28,17 +30,38 @@ export default {
   },
 
   mounted(){
+    console.log(this.blogdata);
+    scrollTop()
     this.blogdata.articles.forEach(articles => {
       if (articles.isVisible) {
         this.visibleArticles.push(articles)
       }
     });
-    load();
+    load(this.testCb)
   },
 
   methods:{
+
     logfunction(){
       console.log(this);
+    },
+
+    testCb(){
+
+      sleep(2000).then(() =>{
+          let isVisibleCount = 0;
+          this.blogdata.articles.forEach(element => {
+        if (element.isVisible) {
+          console.log(element);
+          isVisibleCount ++
+        }
+      });
+      for (let i = isVisibleCount; i < (isVisibleCount + 5) ; i++) {
+        console.log(i);
+        this.blogdata.articles[i].isVisible = true;
+        this.visibleArticles.push(this.blogdata.articles[i])
+        }
+      })
     }
   }
 }

@@ -3,6 +3,7 @@
     "totalResults": 11420,
     "articles": [
         {
+            "isVisible": true,
             "source": {
                 "id": null,
                 "name": "New Zealand Herald"
@@ -16,6 +17,7 @@
             "content": "Former US president Donald Trump arrives at Trump Tower in Manhattan on August 15 in New York City. Photo / Getty ImagesFor a quarter of a century, Donald Trump has enjoyed a place on the prestigious… [+2555 chars]"
         },
         {
+            "isVisible": true,
             "source": {
                 "id": null,
                 "name": "Businessinsider.com.pl"
@@ -29,6 +31,7 @@
             "content": "Sd Federalny w Kalifornii nakaza Tesli zapacenie odszkodowania byemu czarnoskóremu pracownikowi. Owen Diaz oskara firm o to, e ignorowaa jego skargi na rasistowskie traktowanie podczas pracy - napisa… [+3393 chars]"
         },
         {
+            "isVisible": true,
             "source": {
                 "id": null,
                 "name": "Motorpasión"
@@ -42,6 +45,7 @@
             "content": "Peter Rawlinson, CEO de Lucid, ha declarado abiertamente en una entrevista que no comparte la fascinación irracional que parecen haber despertado las nuevas celdas 4680 de batería de Tesla en la indu… [+2864 chars]"
         },
         {
+            "isVisible": true,
             "source": {
                 "id": "ansa",
                 "name": "ANSA.it"
@@ -55,6 +59,7 @@
             "content": "(ANSA) - WASHINGTON, 06 OTT - Nonostante la pandemia, i 400\r\namericani più ricchi hanno aggiunto lo scorso anno 4.500\r\nmiliardi di dollari alla loro ricchezza, un aumento del 40%,\r\nsecondo l'ultima c… [+1167 chars]"
         },
         {
+            "isVisible": true,
             "source": {
                 "id": null,
                 "name": "Gazzetta.it"
@@ -68,6 +73,7 @@
             "content": "Tesla è stata condannata da una corte federale della California a pagare quasi 137 milioni di dollari come risarcimento danni ad un ex dipendente afroamericano per non avere contrastato gli abusi raz… [+1890 chars]"
         },
         {
+            "isVisible": false,
             "source": {
                 "id": null,
                 "name": "Haberturk.com"
@@ -81,6 +87,7 @@
             "content": "Deerli Haberturk.com okurlar.Haberturk.com ekibi olarak Türkiyede ve dünyada yaanan ve haber deeri tayan her türlü gelimeyi sizlere en hzl, en objektif ve en doyurucu ekilde ulatrmak için çalyoruz. Y… [+2178 chars]"
         },
         {
+            "isVisible": false,
             "source": {
                 "id": null,
                 "name": "Www.tsf.pt"
@@ -94,6 +101,7 @@
             "content": "Tesla\r\n© Patrick T. Fallon/AFP\r\nUm tribunal da Califórnia condenou a Tesla a pagar uma indemnização de 137 milhões de dólares (cerca de 118 milhões de euros) a um ex-funcionário que foi alvo de racis… [+2077 chars]"
         },
         {
+            "isVisible": false,
             "source": {
                 "id": null,
                 "name": "Le Soir"
@@ -107,6 +115,7 @@
             "content": "Owen Diaz a travaillé comme opérateur de monte-charge pour le constructeur de véhicules électriques Tesla dans un environnement hostile, selon des documents judiciaires, pendant un an.\r\nAFP.\r\nPar AFP… [+1447 chars]"
         },
         {
+            "isVisible": false,
             "source": {
                 "id": null,
                 "name": "Wall-street.ro"
@@ -120,6 +129,7 @@
             "content": "Constructorul suedez de vehicule comerciale Volvo Trucks a anunat miercuri c a primit o comand pentru 100 de camioane electrice de la firma de shipping DFDS, aceasta fiind cea mai mare comand pentru … [+4533 chars]"
         },
         {
+            "isVisible": false,
             "source": {
                 "id": null,
                 "name": "mobiFlip.de"
@@ -133,6 +143,7 @@
             "content": "Toyota hat seinen Marktanteil auf dem deutschen Pkw-Markt auf einen neuen Bestwert gesteigert: Mit 3,8 Prozent erreichte der japanische Automobilhersteller im September den höchsten Monatswert seit m… [+1156 chars]"
         },
         {
+            "isVisible": false,
             "source": {
                 "id": null,
                 "name": "Feber.se"
@@ -146,6 +157,7 @@
             "content": "En domstol i San Francisco har beslutat att Tesla måste betala 136,9 miljoner dollar i skadestånd till en svart man som anser sig ha blivit utsatt för rasism när han arbetade på Teslas fabrik i Freem… [+921 chars]"
         },
         {
+            "isVisible": false,
             "source": {
                 "id": "liberation",
                 "name": "Libération"
@@ -159,6 +171,7 @@
             "content": "LAssemblée vote linterdiction des «thérapies de conversion». Les députés ont adopté à lunanimité ce mardi soir une proposition de loi LREM réaffirmant linterdiction des pseudos «thérapies de conversi… [+3944 chars]"
         },
         {
+            "isVisible": false,
             "source": {
                 "id": null,
                 "name": "La Tribune.fr"
@@ -172,6 +185,7 @@
             "content": "Volvo s'apprête à entrer à la Bourse de Stockholm, couronnant près de dix ans d'un spectaculaire redressement. La marque automobile suédoise a annoncé lundi qu'elle entamerait sa première cotation av… [+3562 chars]"
         },
         {
+            "isVisible": false,
             "source": {
                 "id": null,
                 "name": "Viva.co.id"
@@ -185,6 +199,7 @@
             "content": "VIVA  Kemunculan taksi terbang sempat bikin heboh di Indonesia, Prestige Image Motorcars menjadi satu-satunya importir umum yang nekat menjual produk-produk muktahir di Indonesia. Selain kendaraan li… [+1262 chars]"
         },
         {
+            "isVisible": false,
             "source": {
                 "id": null,
                 "name": "Sabah.com.tr"
@@ -198,6 +213,7 @@
             "content": "TESLA YETKLS: HALA MÜKEMMEL DELZ\r\nKarar üzerine Tesla Bakan Yardmcs Valerie Capers Workman, irketin bloundaki mesajnda, \"Jürinin kararnn hakl olmadna kuvvetle inanyor olsak da, 2015 ve 2016'da mükemm… [+111 chars]"
         },
         {
+            "isVisible": false,
             "source": {
                 "id": null,
                 "name": "STERN.de"
@@ -211,6 +227,7 @@
             "content": "Seit 25 Jahren war Donald Trump unter den 400 reichsten US-Amerikanern. Jetzt hat \"Forbes\" ihn jedoch aus der Liste geschmissen.\r\nDas Wirtschaftsmagazin \"Forbes\" hat einmal mehr seine Liste der 400 r… [+1432 chars]"
         },
         {
+            "isVisible": false,
             "source": {
                 "id": null,
                 "name": "Www.hln.be"
@@ -224,6 +241,7 @@
             "content": "Een van de grootste bezwaren van tegenstanders van elektrische voertuigen is nog steeds het beperkte rijbereik. Een YouTuber heeft nu met een experiment laten zien hoe je de accu van een Tesla kunt o… [+1612 chars]"
         },
         {
+            "isVisible": false,
             "source": {
                 "id": null,
                 "name": "PC Games Hardware"
@@ -237,6 +255,7 @@
             "content": "Die letzten Monate haben gezeigt, jeder Händler hat seine favorisierten Verkaufsfenster, wenn es um die nach wie vor viel zu stark nachgefragte Playstation 5 geht. Media Markt und Saturn mögen die Ze… [+7587 chars]"
         },
         {
+            "isVisible": false,
             "source": {
                 "id": null,
                 "name": "Brigitte.de"
@@ -250,6 +269,7 @@
             "content": "Seit 25 Jahren war Donald Trump unter den 400 reichsten US-Amerikanern. Jetzt hat \"Forbes\" ihn jedoch aus der Liste geschmissen.\r\nDas Wirtschaftsmagazin \"Forbes\" hat einmal mehr seine Liste der 400 r… [+1432 chars]"
         },
         {
+            "isVisible": false,
             "source": {
                 "id": null,
                 "name": "Skai.gr"
