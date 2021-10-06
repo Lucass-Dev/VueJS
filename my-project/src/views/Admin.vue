@@ -79,6 +79,7 @@ export default {
         publishedAt: this.publishedAt,
         urlToImage: this.urlToImage
       })
+      this.author = this.title = this.description = this.content = ''
     },
     deletePost(index) {
       this.$store.dispatch('removePostByID', index)
