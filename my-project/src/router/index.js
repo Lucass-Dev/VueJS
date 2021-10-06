@@ -20,7 +20,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: '/article',
+    path: '/article/:id',
     name: 'SinglePost',
     component: SinglePost
   }
