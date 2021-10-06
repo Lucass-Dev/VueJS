@@ -1,27 +1,27 @@
 <template>
   <div class="admin">
     <div class="formulaire m-auto">
-      <form class="d-flex flex-column border border-dark p-3">
+      <form @submit.prevent class="d-flex flex-column border border-dark p-3">
         <div class="d-flex justify-content-between mb-3">
           <div>
             <label for="author" class="text-left">Auteur :</label>
-            <input type="text" id="author" class="ms-2 ps-1" placeholder="Nom de l'auteur" />
+            <input v-model="author" type="text" id="author" class="ms-2 ps-1" placeholder="Nom de l'auteur" />
           </div>
           <div>
             <label for="title">Titre :</label>
-            <input type="text" id="title" class="ms-2 ps-1" placeholder="Titre du post" />
+            <input v-model="title" type="text" id="title" class="ms-2 ps-1" placeholder="Titre du post" />
           </div>
           <div>
             <label for="intro">Intro :</label>
-            <input type="text" id="intro" class="ms-2 ps-1" placeholder="Intro du post" />
+            <input v-model="description" type="text" id="intro" class="ms-2 ps-1" placeholder="Intro du post" />
           </div>
 
-          <button>Ajouter</button>
+          <button @click="addPost">Ajouter</button>
         </div>
 
         <div class="d-flex justify-content-center align-items-center">
           <label for="content" class="">Contenu</label>
-          <textarea type="text" id="content" class="ms-2 ps-1 w-75" placeholder="Contenu du post" />
+          <textarea v-model="content" type="text" id="content" class="ms-2 ps-1 w-100" placeholder="Contenu du post" />
         </div>
       </form>
     </div>
@@ -58,7 +58,28 @@
 <script>
 export default {
   name: "Admin",
+  data() {
+    return {
+      author: '',
+      title: '',
+      description: '',
+      content: '',
+      urlToImage: 'https://www.nzherald.co.nz/resizer/7NY_0eA8BUWVhh6tfKe9bGad6m4=/1200x675/filters:quality(70)/cloudfront-ap-southeast-2.images.arcpublishing.com/nzme/22OLS334ZGFMAV3522OAO7HSIA.jpg',
+      publishedAt: new Date()
+    }
+  },
   methods: {
+    addPost() {
+      this.$store.dispatch('addPost', {
+        isVisible: false,
+        author: this.author,
+        title: this.title,
+        description: this.description,
+        content: this.content,
+        publishedAt: this.publishedAt,
+        urlToImage: this.urlToImage
+      })
+    },
     deletePost(index) {
       this.$store.dispatch('removePostByID', index)
     }
@@ -74,7 +95,7 @@ export default {
 <style>
 .admin,
 .formulaire {
-  width: 90%;
+  width: 95%;
 }
 table {
   table-layout: fixed;

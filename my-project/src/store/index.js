@@ -9,14 +9,17 @@ export default new Vuex.Store({
     blogdata: articles,
   },
   mutations: {
-    addPost(state, data) {
-      state.blogdata.articles.push(data);
+    addPost(state, post) {
+      state.blogdata.articles.push(post);
     },
     removePostByIndex(state, index) {
       state.blogdata.articles.splice(index, 1);
     },
   },
   actions: {
+    addPost(context, post) {
+      context.commit("addPost", post)
+    },
     removePostByID(context, index) {
       context.commit("removePostByIndex", index);
     },
