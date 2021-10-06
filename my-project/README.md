@@ -1,4 +1,4 @@
-# blog-vuejs
+# my-project
 
 ## Project setup
 ```
