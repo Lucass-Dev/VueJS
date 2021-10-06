@@ -14,9 +14,9 @@
       <p class="mb-4">
         <i class="fas fa-user me-1"></i>
         <span class="fs-5 me-5">{{
-          blogdata.articles[getId].source.name
+          blogdata.articles[getId].author
         }}</span>
-        <i class="far fa-calendar-alt"></i> {{ dateFormat(blogdata.articles[getId].publishedAt) }}
+        <i class="far fa-calendar-alt"></i> {{ blogdata.articles[getId].publishedAt|dateFormat }}
       </p>
 
       <p>
@@ -36,13 +36,6 @@
 export default {
   name: "SinglePost",
   methods: {
-    dateFormat(date) {
-        return new Date(date).toLocaleDateString("fr-FR", {
-            year: 'numeric',
-            month: 'long',
-            day: '2-digit'
-        })
-    }
   },
   computed: {
     blogdata() {
