@@ -5,23 +5,49 @@
         <div class="d-flex justify-content-between mb-3">
           <div>
             <label for="author" class="text-left">Auteur :</label>
-            <input v-model="author" type="text" id="author" class="ms-2 ps-1" placeholder="Nom de l'auteur" />
+            <input
+              v-model="author"
+              type="text"
+              id="author"
+              class="ms-2 ps-1"
+              placeholder="Nom de l'auteur"
+            />
           </div>
           <div>
             <label for="title">Titre :</label>
-            <input v-model="title" type="text" id="title" class="ms-2 ps-1" placeholder="Titre du post" />
+            <input
+              v-model="title"
+              type="text"
+              id="title"
+              class="ms-2 ps-1"
+              placeholder="Titre du post"
+            />
           </div>
           <div>
             <label for="intro">Intro :</label>
-            <input v-model="description" type="text" id="intro" class="ms-2 ps-1" placeholder="Intro du post" />
+            <input
+              v-model="description"
+              type="text"
+              id="intro"
+              class="ms-2 ps-1"
+              placeholder="Intro du post"
+            />
           </div>
 
-          <button @click="addPost">Ajouter</button>
+          <button @click="addPost(index)">
+            {{ isUpdate ? "Modifier" : "Ajouter" }}
+          </button>
         </div>
 
         <div class="d-flex justify-content-center align-items-center">
           <label for="content" class="">Contenu</label>
-          <textarea v-model="content" type="text" id="content" class="ms-2 ps-1 w-100" placeholder="Contenu du post" />
+          <textarea
+            v-model="content"
+            type="text"
+            id="content"
+            class="ms-2 ps-1 w-100"
+            placeholder="Contenu du post"
+          />
         </div>
       </form>
     </div>
@@ -47,7 +73,8 @@
           <td>{{ article.description }}</td>
           <td>{{ article.content }}</td>
           <td>
-            <button class="me-1">Modifier</button><button @click="deletePost(index)">Supprimer</button>
+            <button @click="editPost(index)" class="me-1">Modifier</button>
+            <button @click="deletePost(index)">Supprimer</button>
           </td>
         </tr>
       </tbody>
@@ -60,34 +87,64 @@ export default {
   name: "Admin",
   data() {
     return {
-      author: '',
-      title: '',
-      description: '',
-      content: '',
-      urlToImage: 'https://www.nzherald.co.nz/resizer/7NY_0eA8BUWVhh6tfKe9bGad6m4=/1200x675/filters:quality(70)/cloudfront-ap-southeast-2.images.arcpublishing.com/nzme/22OLS334ZGFMAV3522OAO7HSIA.jpg',
-      publishedAt: new Date()
-    }
+      isUpdate: false,
+      index: null,
+      author: "",
+      title: "",
+      description: "",
+      content: "",
+      urlToImage:
+        "https://www.nzherald.co.nz/resizer/7NY_0eA8BUWVhh6tfKe9bGad6m4=/1200x675/filters:quality(70)/cloudfront-ap-southeast-2.images.arcpublishing.com/nzme/22OLS334ZGFMAV3522OAO7HSIA.jpg",
+      publishedAt: new Date(),
+    };
   },
   methods: {
-    addPost() {
-      this.$store.dispatch('addPost', {
-        isVisible: false,
-        author: this.author,
-        title: this.title,
-        description: this.description,
-        content: this.content,
-        publishedAt: this.publishedAt,
-        urlToImage: this.urlToImage
-      })
-      this.author = this.title = this.description = this.content = ''
+    addPost(index = null) {
+      if (!this.isUpdate) {
+        this.$store.dispatch("addPost", {
+          isVisible: this.lengthIsLessThanFive,
+          author: this.author,
+          title: this.title,
+          description: this.description,
+          content: this.content,
+          publishedAt: this.publishedAt,
+          urlToImage: this.urlToImage,
+        });
+      } else {
+        this.$store.dispatch("editPost", {
+          index,
+          post: {
+            isVisible: this.blogdata.articles[index].isVisible,
+            author: this.author,
+            title: this.title,
+            description: this.description,
+            content: this.content,
+            publishedAt: this.blogdata.articles[index].publishedAt,
+            urlToImage: this.blogdata.articles[index].urlToImage,
+          },
+        });
+        this.isUpdate = false;
+      }
+      this.author = this.title = this.description = this.content = "";
     },
     deletePost(index) {
-      this.$store.dispatch('removePostByID', index)
-    }
+      this.$store.dispatch("removePostByID", index);
+    },
+    editPost(index) {
+      this.isUpdate = true;
+      this.index = index;
+      this.author = this.blogdata.articles[index].author;
+      this.title = this.blogdata.articles[index].title;
+      this.description = this.blogdata.articles[index].description;
+      this.content = this.blogdata.articles[index].content;
+    },
   },
   computed: {
     blogdata() {
       return this.$store.state.blogdata;
+    },
+    lengthIsLessThanFive() {
+      return this.blogdata.articles.length < 5;
     },
   },
 };

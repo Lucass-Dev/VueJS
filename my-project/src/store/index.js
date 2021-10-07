@@ -15,6 +15,9 @@ export default new Vuex.Store({
     removePostByIndex(state, index) {
       state.blogdata.articles.splice(index, 1);
     },
+    editPost(state, data) {
+      Vue.set(state.blogdata.articles, data.index, data.post)
+    }
   },
   actions: {
     addPost(context, post) {
@@ -23,6 +26,9 @@ export default new Vuex.Store({
     removePostByID(context, index) {
       context.commit("removePostByIndex", index);
     },
+    editPost(context, data) {
+      context.commit("editPost", data)
+    }
   },
   modules: {},
 });
