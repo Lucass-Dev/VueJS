@@ -7,9 +7,11 @@
       <p>Publishing date : {{ article.publishedAt|dateFormat }}</p>
       <router-link :to="`/article/${index}`"><button class="btn btn-dark m-5">Lire +</button></router-link>
     </div>
-    <div class="position-absolute">
-      <span v-if="loading"><button class=" loading"></button></span>
+
+    <div class="position">
+      <span v-if="loading"><button class=" loading"></button> <p class="chargement" >Chargement en cours ...</p> </span>
     </div>
+
   </div>
 </template>
 
@@ -83,13 +85,22 @@ export default {
   .loading {
     height: 40px;
     width: 40px;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgb(255, 255, 255);
     border-radius: 50%;
-    border: 2px solid rgba(0, 0, 0, 0.4);
-    border-top-color: #fff;
-    border-bottom-color: #fff;
+    border: 2px solid rgb(0, 0, 0);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
     animation: spinner3 800ms ease infinite;
+    margin-bottom: 5% !important;
     }
+
+    .chargement {
+
+      margin-top: -4% !important;
+    font-size: 25px !important ;
+
+    }
+
 
     @keyframes spinner3 {
     to {
