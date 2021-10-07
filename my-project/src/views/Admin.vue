@@ -49,6 +49,10 @@
             placeholder="Contenu du post"
           />
         </div>
+        <div v-if="content != ''">
+          <h4 class="mb-3 mt-4">Prévisualisation</h4>
+          <MarkViewer class="border border-black" />
+        </div>
       </form>
     </div>
 
@@ -73,8 +77,12 @@
           <td>{{ article.description }}</td>
           <td>{{ article.content }}</td>
           <td>
-            <button @click="editPost(index)" class="me-1 btn btn-dark">Modifier</button>
-            <button @click="deletePost(index)" class="btn btn-dark">Supprimer</button>
+            <button @click="editPost(index)" class="me-1 btn btn-dark">
+              Modifier
+            </button>
+            <button @click="deletePost(index)" class="btn btn-dark">
+              Supprimer
+            </button>
           </td>
         </tr>
       </tbody>
@@ -83,8 +91,15 @@
 </template>
 
 <script>
+import MarkViewer from "../components/MarkViewer.vue";
+// import MarkEditor from "../components/MarkEditor.vue";
+
 export default {
   name: "Admin",
+  components: {
+    MarkViewer,
+    // MarkEditor,
+  },
   data() {
     return {
       isUpdate: false,
@@ -92,7 +107,7 @@ export default {
       author: "",
       title: "",
       description: "",
-      content: "",
+      // content: this.text,
       urlToImage:
         "https://www.nzherald.co.nz/resizer/7NY_0eA8BUWVhh6tfKe9bGad6m4=/1200x675/filters:quality(70)/cloudfront-ap-southeast-2.images.arcpublishing.com/nzme/22OLS334ZGFMAV3522OAO7HSIA.jpg",
       publishedAt: new Date(),
@@ -145,6 +160,14 @@ export default {
     },
     lengthIsLessThanFive() {
       return this.blogdata.articles.length < 5;
+    },
+    content: {
+      get() {
+        return this.$store.state.markText;
+      },
+      set(value) {
+        this.$store.commit("setMarkText", value);
+      },
     },
   },
 };

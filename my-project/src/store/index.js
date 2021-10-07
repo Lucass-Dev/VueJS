@@ -7,6 +7,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     blogdata: articles,
+    markText: ''
   },
   mutations: {
     addPost(state, post) {
@@ -17,6 +18,9 @@ export default new Vuex.Store({
     },
     editPost(state, data) {
       Vue.set(state.blogdata.articles, data.index, data.post)
+    },
+    setMarkText(state, text) {
+      state.markText = text
     }
   },
   actions: {
