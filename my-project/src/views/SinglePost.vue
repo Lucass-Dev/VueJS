@@ -26,15 +26,21 @@
 
       <p>
         <span class="fw-bold">Contenu du Post : </span>
-        {{ blogdata.articles[getId].content }}
+        <!-- {{ blogdata.articles[getId].content }} -->
+        <MarkViewer />
       </p>
     </div>
   </div>
 </template>
 
 <script>
+import MarkViewer from '../components/MarkViewer.vue'
+
 export default {
   name: "SinglePost",
+  components: {
+    MarkViewer
+  },
   methods: {
   },
   computed: {
@@ -43,8 +49,11 @@ export default {
     },
     getId() {
       return this.$route.params.id;
-    }
+    },
   },
+  beforeMount() {
+    this.$store.commit("setMarkText", this.blogdata.articles[this.getId].content);
+  }
 };
 </script>
 

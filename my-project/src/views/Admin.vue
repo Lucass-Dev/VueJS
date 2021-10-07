@@ -92,13 +92,11 @@
 
 <script>
 import MarkViewer from "../components/MarkViewer.vue";
-// import MarkEditor from "../components/MarkEditor.vue";
 
 export default {
   name: "Admin",
   components: {
-    MarkViewer,
-    // MarkEditor,
+    MarkViewer
   },
   data() {
     return {
@@ -170,6 +168,9 @@ export default {
       },
     },
   },
+  mounted() {
+    this.$store.commit("setMarkText", '');
+  }
 };
 </script>
 
