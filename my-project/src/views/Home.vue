@@ -109,7 +109,7 @@ export default {
     } 
 
     .article:hover{
-      transform: scale(1.1) ;
+      transform: scale(1.05) ;
       transition: 1s;
     }
     .article{

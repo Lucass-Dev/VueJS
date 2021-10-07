@@ -1,7 +1,7 @@
 <template>
   <div class="admin">
-    <div class="formulaire m-auto">
-      <form @submit.prevent class="d-flex flex-column border border-dark p-3">
+    <div class="formulaire my-5 mx-auto">
+      <form @submit.prevent class="d-flex flex-column border border-dark p-4">
         <div class="d-flex justify-content-between mb-3">
           <div>
             <label for="author" class="text-left">Auteur :</label>

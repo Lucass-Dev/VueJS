@@ -10,10 +10,10 @@
             },
             "author": "Lucas L. | Christopher B | Alexis M. | Emeric P.",
             "title": "Vue.js ou la dinamisation de votre site demanière très performante et facile d'accès !",
-            "description": "Voici la description de l'article",
+            "description": "Le vueJS",
             "publishedAt":"2021-10-06T06:08:11Z",
-            "urlToImage": "https://www.nzherald.co.nz/resizer/7NY_0eA8BUWVhh6tfKe9bGad6m4=/1200x675/filters:quality(70)/cloudfront-ap-southeast-2.images.arcpublishing.com/nzme/22OLS334ZGFMAV3522OAO7HSIA.jpg",
-            "content": ""
+            "urlToImage": "https://www.coqpit.fr/wp-content/uploads/2019/05/vuejs-wide.png",
+            "content": " Les mots clés important: Directives, s'utilise comme un attribut HTML (v-for, v-html, v-if) Events, par exemple : v-on:click ou @click Template = le code HTML / Visuel d'un composant ou d'une App Vue Imaginez le flux suivant - règles sur la lecture et modification de la data. 1) La donnée est modifiée d'un coté, via votre code. Modifiez toujours la 'data' depuis des méthodes, ou exceptionnellement pour des compteur, vous pouvez utiliser le format x++ depuis le 'template'. Les computed, par défaut, ne peuvent pas modifier la data.  2) La donnée est lue et utilisée Dans le 'template' Dans le code (les computed, les methods, les watchers, ...) Ne pas modifier l'HTML vous-même Utilisez VueJS pour parvenir à vos besoins, interdiction de modifier l'HTML vous-même (avec getElementById, innerHTML etc...)  Si vous avez une variable de type String contenant de l'HTML, utilisez la directive v-html "
         },
         {
             "isVisible": true,
