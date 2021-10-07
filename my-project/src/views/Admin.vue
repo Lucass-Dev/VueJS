@@ -34,7 +34,7 @@
             />
           </div>
 
-          <button @click="addPost(index)">
+          <button @click="addPost(index)" class="btn btn-dark">
             {{ isUpdate ? "Modifier" : "Ajouter" }}
           </button>
         </div>
@@ -52,7 +52,7 @@
       </form>
     </div>
 
-    <table class="table table-striped mt-4">
+    <table class="table table-bordered table-striped mt-4">
       <thead>
         <tr>
           <th>Id</th>
@@ -69,12 +69,12 @@
           <td>{{ index }}</td>
           <td>{{ article.author }}</td>
           <td>{{ article.publishedAt | dateFormat }}</td>
-          <td>{{ article.title }}</td>
+          <td class="overflow-auto">{{ article.title }}</td>
           <td>{{ article.description }}</td>
           <td>{{ article.content }}</td>
           <td>
-            <button @click="editPost(index)" class="me-1">Modifier</button>
-            <button @click="deletePost(index)">Supprimer</button>
+            <button @click="editPost(index)" class="me-1 btn btn-dark">Modifier</button>
+            <button @click="deletePost(index)" class="btn btn-dark">Supprimer</button>
           </td>
         </tr>
       </tbody>

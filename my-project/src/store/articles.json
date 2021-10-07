@@ -3,6 +3,19 @@
     "totalResults": 11420,
     "articles": [
         {
+            "isVisible":true,
+            "source":{
+                "id": null,
+                "name": "Coding Factory from Paris, NY"
+            },
+            "author": "Lucas L. | Christopher B | Alexis M. | Emeric P.",
+            "title": "Vue.js ou la dinamisation de votre site demanière très performante et facile d'accès !",
+            "description": "Voici la description de l'article",
+            "publishedAt":"2021-10-06T06:08:11Z",
+            "urlToImage": "https://www.nzherald.co.nz/resizer/7NY_0eA8BUWVhh6tfKe9bGad6m4=/1200x675/filters:quality(70)/cloudfront-ap-southeast-2.images.arcpublishing.com/nzme/22OLS334ZGFMAV3522OAO7HSIA.jpg",
+            "content": ""
+        },
+        {
             "isVisible": true,
             "source": {
                 "id": null,

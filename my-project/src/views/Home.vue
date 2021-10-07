@@ -1,5 +1,5 @@
 <template>
-  <div class="home" id="infinite-scroll">
+  <div class="home bg-light" id="infinite-scroll">
     
     <div class="article border border-3 border-dark rounded m-5" v-for="(article, index) in visibleArticles" :key="index">
       <h4 class="m-5">{{ article.title }}</h4>
@@ -107,5 +107,13 @@ export default {
     transform: rotate(360deg);
     }
     } 
+
+    .article:hover{
+      transform: scale(1.1) ;
+      transition: 1s;
+    }
+    .article{
+      transition: all 1s ease-in-out;
+    }
 
 </style>
