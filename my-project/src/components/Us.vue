@@ -25,7 +25,7 @@
 
 
 <div class="cards cards--two">
-    <img src="" class="img-responsive" alt="Cards Image">
+    <img src="https://img.maxisciences.com/s3/frgsd/sante/default_2020-09-01_f0c74dfa-1588-4a12-97f3-5b94d0b08d33.jpeg" class="img-responsive" alt="Cards Image">
     <span class="cards--two__rect"></span>
     <span class="cards--two__tri"></span>
     <p>Emeric </p>  
@@ -84,6 +84,7 @@ export default {
   padding: 10px;
   font-family: "Do Hyeon", sans-serif;
   overflow: hidden;
+  margin-left: 4% !important ;
 }
 .card__collection .cards {
   width: 300px;
