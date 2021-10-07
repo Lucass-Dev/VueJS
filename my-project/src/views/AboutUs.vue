@@ -51,4 +51,64 @@ export default {
 }
 
 
+
+
+
+@media screen and (min-width: 376px) and (max-width: 450px) {     /*style petites-moyennes tablettes */
+
+    
+.fond h5 {
+  font-size: 10px !important;
+    margin-top: -3% !important;
+
+}
+
+
+.fond p {
+  font-size: 10px !important;
+  margin-top: 17% !important;
+}
+    
+  }
+
+
+
+
+  @media screen and (min-width: 321px) and (max-width: 375px) {  /*style smartphones et petites tablettes en portrait*/
+
+.fond h5 {
+  font-size: 10px !important;
+    margin-top: -3% !important;
+
+}
+
+
+.fond p {
+  font-size: 10px !important;
+  margin-top: 12% !important;
+}
+    
+  }
+  
+  
+
+    @media screen and (max-device-width: 320px) {   /*style petits smartphones en voie de disparition*/
+      
+        
+.fond h5 {
+  font-size: 10px !important;
+    margin-top: -3% !important;
+
+}
+
+
+.fond p {
+  font-size: 10px !important;
+  margin-top: 10% !important;
+}
+    
+  }
+
+
+
 </style>

@@ -84,7 +84,7 @@ export default {
   padding: 10px;
   font-family: "Do Hyeon", sans-serif;
   overflow: hidden;
-  margin-left: 4% !important ;
+  margin-left: 5% !important ;
 }
 .card__collection .cards {
   width: 300px;
@@ -424,6 +424,48 @@ export default {
 .card__collection .cards--three__list li:nth-child(3) {
   transition-delay: 0.4s;
 }
+
+
+
+@media screen and (min-width: 376px) and (max-width: 450px) {     /*style petites-moyennes tablettes */
+
+    
+.img-responsive {
+  margin-top: 10% !important;
+}
+
+    
+  }
+
+
+
+
+  @media screen and (min-width: 321px) and (max-width: 375px) {  /*style smartphones et petites tablettes en portrait*/
+
+   .card__collection {
+     
+     }
+  
+
+
+.img-responsive {
+  width: 50% ;
+  height: 50%;
+}
+
+  }
+  
+  
+
+    @media screen and (max-device-width: 320px) {   /*style petits smartphones en voie de disparition*/
+      
+        .img-responsive {
+  width: 50% ;
+  height: 50%;
+}
+        
+    }
+
 
 
 </style>
