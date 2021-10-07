@@ -38,10 +38,14 @@
 #nav a {
   font-weight: bold;
   color: rgba(255, 255, 255, 0.733);
+    text-decoration: none !important;
+
 }
 
 #nav a.router-link-exact-active {
   color: #2c3e50;
+    text-decoration: none !important;
+
 }
 
 
